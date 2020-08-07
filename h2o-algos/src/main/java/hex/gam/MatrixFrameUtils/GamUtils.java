@@ -9,7 +9,6 @@ import hex.glm.GLMModel.GLMParameters;
 import water.DKV;
 import water.Key;
 import water.MemoryManager;
-import water.Scope;
 import water.fvec.Frame;
 import water.fvec.Vec;
 import water.util.ArrayUtils;
@@ -93,6 +92,12 @@ public class GamUtils {
     setParamField(parms, glmParam, true, field2);
     glmParam._train = trainData._key;
     glmParam._valid = valid==null?null:valid._key;
+    glmParam._nfolds = 0; // always set nfolds to 0 to disable cv in GLM.  It is done in GAM
+    glmParam._fold_assignment = Model.Parameters.FoldAssignmentScheme.AUTO;
+    glmParam._keep_cross_validation_fold_assignment = false;
+    glmParam._keep_cross_validation_models = false;
+    glmParam._keep_cross_validation_predictions = false;
+    glmParam._is_cv_model = false; // disable cv in GLM.
     return glmParam;
   }
 
