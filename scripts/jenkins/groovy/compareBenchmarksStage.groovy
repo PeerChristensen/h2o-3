@@ -108,42 +108,42 @@ def call(final pipelineContext, final stageConfig, final benchmarkFolderConfig) 
         'gam': [
             'paribas': [
                 COORDINATE_DESCENT: [
-                    'train_time_min': 3,
-                    'train_time_max': 16
+                    'train_time_min': 0,
+                    'train_time_max': 200
                 ],
                 IRLSM: [
-                    'train_time_min': 4,
-                    'train_time_max':16 
+                    'train_time_min': 0,
+                    'train_time_max':200 
                 ]
             ],
             'homesite': [
                 COORDINATE_DESCENT: [
-                    'train_time_min': 38,
-                    'train_time_max': 96
+                    'train_time_min': 0,
+                    'train_time_max': 200
                 ],
                 IRLSM: [
-                    'train_time_min': 71,
-                    'train_time_max': 168
+                    'train_time_min': 0,
+                    'train_time_max': 200
                 ]
             ],
             'springleaf': [
                 COORDINATE_DESCENT: [
-                    'train_time_min': 144,
+                    'train_time_min': 0,
                     'train_time_max': 308
                 ],
                 IRLSM: [
-                    'train_time_min': 259,
+                    'train_time_min': 0,
                     'train_time_max': 544
                 ]
             ],
             'higgs': [
                 COORDINATE_DESCENT: [
-                    'train_time_min': 47,
-                    'train_time_max': 108
+                    'train_time_min': 0,
+                    'train_time_max': 200
                 ],
                 IRLSM: [
-                    'train_time_min': 65,
-                    'train_time_max': 146
+                    'train_time_min': 0,
+                    'train_time_max': 200
                 ]
             ]
         ],
