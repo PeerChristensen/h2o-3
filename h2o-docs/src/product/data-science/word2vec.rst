@@ -145,7 +145,7 @@ Below is a simple example showing how to build a Word2vec model.
    	}
 
    	# Break job titles into sequence of words:
-   	words <- tokenize(job_titles$jobtitle)
+   	words <- tokenize(job_title$jobtitle)
 
    	# Build the word2vec model:
    	w2v_model <- h2o.word2vec(words, sent_sample_rate = 0, epochs = 10)
@@ -158,7 +158,7 @@ Below is a simple example showing how to build a Word2vec model.
 
    	# Prepare training & validation data (keep only job titles made of known words):
    	valid_job_titles <- ! is.na(job_title_vecs$C1)
-   	data <- h2o.cbind(job.titles[valid_job_titles, "category"], job_title_vecs[valid_job_titles, ])
+   	data <- h2o.cbind(job_title[valid_job_titles, "category"], job_title_vecs[valid_job_titles, ])
    	data_split <- h2o.splitFrame(data, ratios = 0.8)
 
    	# Build a basic GBM model:
